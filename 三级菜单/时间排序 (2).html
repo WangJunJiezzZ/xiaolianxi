@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>onChange事件</title>
+    <script type="text/javascript" language="JavaScript">
+        function change(val) {
+            document.myForm.show.value=val;
+        }
+    </script>
+</head>
+<body>
+<form action="" method="post" name="myForm">
+    部门:<select name="dept" onchange="change(this.value)">
+        <option value="技术部">技术部</option>
+        <option value="研发部">研发部</option>
+        <option value="销售部">销售部</option><br>
+      </select>
+        结果:<input type="text" name="show" value="" >
+
+</form>
+</body>
+</html>

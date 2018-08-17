@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style type="text/css">
+    <!--
+    ul,li { list-style:none;}
+    .wrap { width:100%; line-height:2em;}
+    .nav1 { float:left; width:10%; background:#ccc;}
+    .nav2 { float:left; width:10%; background:#00cc66;}
+    .nav2 ul { display:none;}
+    .content { float:left; width:20%; background:#cc0066;}
+    -->
+    </style>
+    <script type="text/javascript">
+    <!--
+        $(function(){
+            $(".nav1").find("a").each(function(index){
+                $(this).click(function(){
+                    $(".nav2").children().css("display","none");
+                    $(".nav2").children().eq(index).css("display","block");
+                });
+            });
+             
+            $(".nav2").find("a").each(function(){
+                $(this).click(function(){
+                    $(".content").text($(this).text());
+                });
+            });
+        });
+    //-->
+    </script>
+</head>
+<body>
+ 
+<div class="wrap">
+ 
+<!--栏目-->
+<div class="nav1">
+    <ul>
+        <li><a href="#">栏目一</a></li>
+        <li><a href="#">栏目二</a></li>
+        <li><a href="#">栏目三</a></li>
+        <li><a href="#">栏目四</a></li>
+        <li><a href="#">栏目五</a></li>
+    </ul></div>
+ 
+<!--分类-->
+<div class="nav2">
+    <ul>
+        <li><a href="#">栏目一分类1</a></li>
+        <li><a href="#">栏目一分类2</a></li>
+        <li><a href="#">栏目一分类3</a></li>
+        <li><a href="#">栏目一分类4</a></li>
+        <li><a href="#">栏目一分类5</a></li>
+    </ul>
+    <ul>
+        <li><a href="#">栏目二分类1</a></li>
+        <li><a href="#">栏目二分类2</a></li>
+        <li><a href="#">栏目二分类3</a></li>
+        <li><a href="#">栏目二分类4</a></li>
+        <li><a href="#">栏目二分类5</a></li>
+    </ul>
+    <ul>
+        <li><a href="#">栏目三分类1</a></li>
+        <li><a href="#">栏目三分类2</a></li>
+        <li><a href="#">栏目三分类3</a></li>
+        <li><a href="#">栏目三分类4</a></li>
+        <li><a href="#">栏目三分类5</a></li>
+    </ul>
+    <ul>
+        <li><a href="#">栏目四分类1</a></li>
+        <li><a href="#">栏目四分类2</a></li>
+        <li><a href="#">栏目四分类3</a></li>
+        <li><a href="#">栏目四分类4</a></li>
+        <li><a href="#">栏目四分类5</a></li>
+    </ul>
+    <ul>
+        <li><a href="#">栏目五分类1</a></li>
+        <li><a href="#">栏目五分类2</a></li>
+        <li><a href="#">栏目五分类3</a></li>
+        <li><a href="#">栏目五分类4</a></li>
+        <li><a href="#">栏目五分类5</a></li>
+    </ul></div>
+ 
+<!--分类内容-->
+<div class="content"></div>
+ 
+</div>
+</body>
+</html>

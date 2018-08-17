@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		
+		<!--onchange 事件会在内容改变时发生。-->
+		<!--新建一个下拉菜单 更换可以跳转到其他页面-->
+		<select name="" onchange="on()" id="1">
+			<option value="http:\\www.baidu.com" >百度</option>
+			<option value="http:\\www.163.com">网易</option>
+			<option value="http:\\www.qq.com" >腾讯</option>
+		</select>
+ 
+		<script type="text/javascript">
+			function on(){
+				var url=document.getElementById("1").value;
+				//window.location.href=url;
+				window.open(url);
+			}
+		</script>
+	</body>
+
+</html>
